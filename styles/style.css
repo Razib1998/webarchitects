@@ -13,13 +13,14 @@ height:64px ;
 width: 180px;
 margin: 32px 280px;
 border-radius: 5px;
-
-
-
-
-
-
-
+border: none;
+}
+.text-gray-light{
+   color: var(--dark-03, #727272);
+   font-size: 1rem;
+   font-weight: 400;
+   margin-top: 1px;
+    
 }
 /*Header section*/
 header{
@@ -75,9 +76,59 @@ nav li a{
 }
 .banner-img{
     width: 100%;
+   
+}
+/*main section*/
+
+main{
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
+.feature{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    
+}
+.feature-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+   
+}
+.feature-description{
+  padding-left: 70px;
+  padding-right: 10px;
+  
+  
+}
+.feture-heading{
+    color: var(--dark-01, #131313);
+    font-size: 45px;
+     font-weight: 700;
+   }
+.span-1{
+    color: var(--dark-03, #727272);
+    font-size: 45px;
+  font-weight: 500;
+     }
+.span-2{
+color: #FF900E;
+font-size: 45px;
+font-weight: 700;
 
+}
+.feature-btn{
+   height: 64px; 
+   width: 180px;
+   background-color: #FF900E;
+   border-radius: 5px;
+   color: #FFF;
+   font-size: 1.3rem;
+   font-weight: 600;
+   border: none;
+}
 
 
 
@@ -94,15 +145,16 @@ nav li a{
 
 @media screen and (max-width: 572px) {
   header{
-    padding: 5px 20px;
+    padding: 20px;
   }  
     
     
-    nav{
+    nav,
+    .feature{
         flex-direction: column;
     }
     .btn-primary{
-        margin: 20px 90px;
+        margin: 20px 100px;
     }
     .banner-title{
         
@@ -111,6 +163,12 @@ nav li a{
     }
     ul{
         text-align: left;
+    }
+    .feature-img{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .feature-description{
+        padding-left: 20px;
     }
     
 }
